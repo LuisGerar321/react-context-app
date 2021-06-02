@@ -7,17 +7,34 @@ import { LoginContext } from '../context/LoginContext ';
 export const ButtonComp = ({formUser, formPass}) => {
         const  {user, setUser, password, setPassword, isLoggedIn,  setIsLoggedIn }   = useContext(LoginContext);
 
-        const callbackValidateInfo = () => {
+
+
+        const callbackValidateInfoLogIn  = () => {
                 //find if  formUser exist and if it match with the password//
                         //change the state//
                         setUser(formUser);
                         setPassword( formPass)
                         setIsLoggedIn(true);
         };
+
+        const callbackLogOut = () => {
+                //find if  formUser exist and if it match with the password//
+                        //change the state//
+                        setUser("");
+                        setPassword( "")
+                        setIsLoggedIn(false);
+        };
+
         console.log( `user:  ${user}, pass ${password}`  ); 
         return (
+                !isLoggedIn?
                 <div>
-                        <Button onClick  = { callbackValidateInfo  }  >   Login   </Button>    
+                        <Button onClick  = { callbackValidateInfoLogIn  }  >   Login   </Button>    
+                </div>:
+
+                <div>
+                        <Button onClick  = { callbackLogOut  }  >   LogOut   </Button>    
                 </div>
+
         )
 }

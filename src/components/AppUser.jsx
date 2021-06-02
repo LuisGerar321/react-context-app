@@ -4,7 +4,7 @@ import { Login } from './Login'
 import { ThemeContext } from '../context/ThemeContext'
 import { ButtonTheme } from './ButtonTheme'
 import { LoginContext } from '../context/LoginContext '
-
+import { ButtonComp } from './ButtonComp'
 
 // import { LoginProvider } from '../context/LoginContext '
 
@@ -28,8 +28,9 @@ export const AppUser = () => {
                         
                 </div>: 
                 <div style  =  {  {...theme, height:"100vh"   }   }       >
-                        <h1> Logeado prro</h1>
+                        <h1> Welcome '{user }'</h1>
 
+                        <ButtonComp/>
                         <ButtonTheme/>
                 </div>
 
