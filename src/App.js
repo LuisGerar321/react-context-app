@@ -2,6 +2,7 @@
 import './App.css';
 import { AppUser } from './components/AppUser';
 import { ThemeProvider } from './context/ThemeContext';
+import { LoginProvider } from './context/LoginContext ';
 
 
 function App() {
@@ -9,18 +10,12 @@ function App() {
 
 
     <ThemeProvider>
-      <div className="App">
-        <AppUser/>
-      </div>
+      <LoginProvider>
+        <div className="App">
+          <AppUser/>
+        </div>
+      </LoginProvider>
     </ThemeProvider>
-
-
-
-    
-    
-    
-  
-
   );
 }
 

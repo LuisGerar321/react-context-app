@@ -9,9 +9,8 @@ export const ButtonTheme = () => {
 
         const callBackTheme = ()=>{
                 setIsDay(!isDay);
-                isDay ? setTheme( themeConfigFixed.night) : setTheme( themeConfigFixed.day   );
+                !isDay ? setTheme( themeConfigFixed.night) : setTheme( themeConfigFixed.day   );
         }
-
         return (
                 <div>
                         <IconButton  aria-label="Night" onClick =  {  callBackTheme   }   >
