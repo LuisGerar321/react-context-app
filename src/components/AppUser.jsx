@@ -5,8 +5,12 @@ import { ThemeContext } from '../context/ThemeContext'
 import { ButtonTheme } from './ButtonTheme'
 import { LoginContext } from '../context/LoginContext '
 import { ButtonComp } from './ButtonComp'
+import { UserProvider } from '../context/UserContext'
 
 // import { LoginProvider } from '../context/LoginContext '
+
+import {Card} from './Card.jsx';
+
 
 
 export const AppUser = () => {
@@ -18,7 +22,7 @@ export const AppUser = () => {
         return (
 
                 !isLoggedIn ?
-                <div style  =  {  {...theme, height:"100vh"   }   }>
+                <div style  =  {  {...theme, height:"100%"   }   }>
 
                         {/* <LoginProvider> */}
                                 <Login/>
@@ -27,11 +31,15 @@ export const AppUser = () => {
 
                         
                 </div>: 
-                <div style  =  {  {...theme, height:"100vh"   }   }       >
-                        <h1> Welcome '{user }'</h1>
+                <div style  =  {  {...theme, height:"100%"   }   }       >
 
-                        <ButtonComp/>
-                        <ButtonTheme/>
+                        <UserProvider> 
+                                <h1> Welcome '{user }'</h1>
+                                <ButtonComp/>
+                                <ButtonTheme/>
+
+                                <Card>    </Card>
+                        </UserProvider>
                 </div>
 
 

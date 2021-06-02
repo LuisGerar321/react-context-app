@@ -37,3 +37,46 @@
     transform: rotate(360deg);
   }
 }
+
+.CardsContainers{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.nightCard{
+  width: 300px;
+  /* height: 400px; */
+  border-radius: 10px;
+  margin: 20px;
+  background-color: rgba(207, 203, 196, 0.089);
+  box-shadow: 2px 2px 10px 1px rgba(24, 37, 61, 0.678);
+  padding: 20px;
+  flex-shrink: inherit;
+  /* display: flex;
+  flex-direction: column;
+  flex-grow: inherit; */
+}
+
+.dayCard{
+  width: 800px;
+  height: 400px;
+  border-radius: 10px;
+  margin: 50px;
+  background-color: rgba(207, 203, 196, 0.089);
+  box-shadow: 2px 2px 10px 1px rgba(67, 70, 77, 0.678);
+  padding: 20px;
+  /* display: flex; */
+}
+
+.img { 
+  width: 100px;
+  height: auto;
+}
+.delete{
+  float: right;
+  right: -20px;
+  top: -20px;
+}

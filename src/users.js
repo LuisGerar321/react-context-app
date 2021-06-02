@@ -4,7 +4,7 @@ import avatar3 from './images/avatar3.png';
 import avatar4 from './images/avatar4.png';
 import avatar5 from './images/avatar5.png';
 
-export const USERS = [
+const USERS = [
   {
     id: 1,
     name: "Jhon Doe",
@@ -36,3 +36,5 @@ export const USERS = [
     biography: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. "
   },
 ];
+
+export default USERS;
