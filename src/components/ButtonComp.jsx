@@ -29,11 +29,11 @@ export const ButtonComp = ({formUser, formPass}) => {
         return (
                 !isLoggedIn?
                 <div>
-                        <Button onClick  = { callbackValidateInfoLogIn  }  >   Login   </Button>    
+                        <Button  variant="outline-primary" onClick  = { callbackValidateInfoLogIn  }  >   Log in   </Button>    
                 </div>:
 
                 <div>
-                        <Button onClick  = { callbackLogOut  }  >   LogOut   </Button>    
+                        <Button variant="outline-primary" onClick  = { callbackLogOut  }  >   Log out   </Button>    
                 </div>
 
         )

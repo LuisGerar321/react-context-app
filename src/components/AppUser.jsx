@@ -7,6 +7,8 @@ import { LoginContext } from '../context/LoginContext '
 import { ButtonComp } from './ButtonComp'
 import { UserProvider } from '../context/UserContext'
 
+import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+
 // import { LoginProvider } from '../context/LoginContext '
 
 import {Card} from './Card.jsx';
@@ -22,7 +24,7 @@ export const AppUser = () => {
         return (
 
                 !isLoggedIn ?
-                <div style  =  {  {...theme, height:"100%"   }   }>
+                <div style  =  {  {...theme, height:"100vh"   }   }>
 
                         {/* <LoginProvider> */}
                                 <Login/>
@@ -34,8 +36,24 @@ export const AppUser = () => {
                 <div style  =  {  {...theme, height:"100%"   }   }       >
 
                         <UserProvider> 
-                                <h1> Welcome '{user }'</h1>
+
+{/* #e6e6e6 */}
+                                <Navbar variant="light" style =  { { backgroundColor:  "#c7c6c6"}  } >
+                                <Navbar.Brand href="#home">Login as: {user}</Navbar.Brand>
+                                <Nav className="mr-auto"   >
+                                <Nav.Link href="#home">Home</Nav.Link>
+                                <Nav.Link href="#features">Features</Nav.Link>
+                                <Nav.Link href="#pricing">Pricing</Nav.Link>
+                                </Nav>
+                                <Form inline>
+                                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                                {/* <Button variant="outline-primary">Search</Button> */}
                                 <ButtonComp/>
+                                </Form>
+                                </Navbar>
+
+
+                                
                                 <ButtonTheme/>
 
                                 <Card>    </Card>
